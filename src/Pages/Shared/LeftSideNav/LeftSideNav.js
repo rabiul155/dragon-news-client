@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 const LeftSideNav = () => {
     const [categories, setCategories] = useState([]);
 
-    useEffect( () =>{
-        fetch('http://localhost:5000/news-categories')
-        .then( res => res.json())
-        .then(data => setCategories(data));
+    useEffect(() => {
+        fetch('https://61-dragon-news-server.vercel.app/news-categories')
+            .then(res => res.json())
+            .then(data => setCategories(data));
     }, [])
 
     return (
